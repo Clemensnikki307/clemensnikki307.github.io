@@ -24,3 +24,13 @@ nav {text-align: center;
 		width: 640px;
 		height: 480px;
 		background-repeat; no-repeat;  }
+form (
+	margin: 0 auto;
+	text-align: left;
+	)
+
+
+input {
+	float: left;
+	clear: left;
+	margin: 10px;}
