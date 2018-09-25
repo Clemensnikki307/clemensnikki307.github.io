@@ -3,10 +3,10 @@
 <head>
 <!--
       JavaScript 6th Edition
-      Chapter 2
+      Chapter 3
 
       Author: Nikki Clemens
-      Date:   9-17-18
+      Date:   9-24-18
 
       Filename: purchase.html
    -->
@@ -34,38 +34,41 @@
 	<h3>Choose your set up below</h3>
 	<form>
 		<input type="checkbox" id="plant1" value="10" />
-		<label for="plant1">Venus Flytrap  $10.00</label>
+		<label for="plant1">Venus Flytrap  $10.00</label> <br>
 		<input type="checkbox" id="plant2" value="15" />
-		<label for="plant2">Cobra Lily  $15.00</label>
+		<label for="plant2">Cobra Lily  $15.00</label> <br>
 		<input type="checkbox" id="plant3" value="18" />
-		<label for="plant3">Drosera Capensis  $18.00</label>
+		<label for="plant3">Drosera Capensis  $18.00</label> <br>
 		<input type="checkbox" id="plant4" value="20" />
-		<label for="plant4">Nepenthes Rajah  $20.00</label>
+		<label for="plant4">Nepenthes Rajah  $20.00</label> <br>
 		<input type="checkbox" id="plant5" value="25" />
-		<label for="plant5">Nepenthes Lowii  $25.00</label>
+		<label for="plant5">Nepenthes Lowii  $25.00</label> <br>
 		<input type="checkbox" id="set1" value="100" />
-		<label for="set1">Plant set up kit  $100.00</label>
-		<input type="submit" id="submit" value="Submit" />
+		<label for="set1">Plant set up kit  $100.00</label> <br>
+		<input type="button" id="submit" value="Submit" />
 	</form>
+	<div>
+		<p id="total"></p>
+	</div>
 <script>
+// function to add values of the selected plants and display total
 function calcTotal() {
 	var plantTotal = 0;
-	var plant1 = document.getElementById("plant1");
-	var plant2 = document.getElementById("plant2");
-	var plant3 = document.getElementById("plant3");
-	var plant4 = document.getElementById("plant4");
-	var plant5 = document.getElementById("plant5");
-	var set1 = document.getElementById("set1");
-	(plant1.checked) ? (plantTotal += 10) : (plantTotal += 0);
-	(plant2.checked) ? (plantTotal += 15) : (plantTotal += 0);
-	(plant3.checked) ? (plantTotal += 18) : (plantTotal += 0);
-	(plant4.checked) ? (plantTotal += 20) : (plantTotal += 0);
-	(plant5.checked) ? (plantTotal += 25) : (plantTotal += 0);
-	(set1.checked) ? (plantTotal += 100) : (plantTotal += 0);
-	var orderTotal = plantTotal
-	alert("Your total is $" + orderTotal);
+	var items = document.getElementsByTagName("input");
+		for (var i = 0; i < 6; i++){
+			if (items[i].checked) {
+		plantTotal += (items[i].value * 1);
+		}
 	}
-	document.getElementById("submit").addEventListener("click", calcTotal, false);	
+	document.getElementById("total").innerHTML = "Your total is $" + plantTotal + ".00";
+	}
+	// to add a backwards compatible event listener for old browsers
+	var submitButton = document.getElementById("submit");
+	if (submitButton.addEventListener) {
+		submitButton.addEventListener("click", calcTotal, false);
+	} else if (submitButton.attachEvent) {
+		submitButton.attachEvent("onclick", calcTotal);
+	}
 </script>
 	
 	</main>

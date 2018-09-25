@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!--
+      JavaScript 6th Edition
+      Chapter 3
+
+      Author: Nikki Clemens
+      Date:   9-24-18
+
+      Filename: care.html
+   -->
 	<title>Carnivorous Plants:::Caring For A Venus Flytrap</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="plants.css">
+	
 	<script src="modernizr.custom.05819.js"></script>
 	<!--Used for older browsers to correctly display page-->
 </head>
@@ -21,18 +31,35 @@
 	<a href="purchase.html">Ready To Purchase?</a>
 </nav>
 	<main>
-	<h3>If you are interested in owning and taking care of your own carnivorous plant, below you will find ones that are easy to care for when you are starting out.</h3>
-	<p>
-	This is a sentence. This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.This is a sentence.
-	</p>
-	<ul>
-		<li>One</li>
-		<li>Two</li>
-		<li>Three</li>
-	</ul>
-	
+	<h2>Are you interested in owning and taking care of your own carnivorous plant?</h2>
+	<p>Which plant do you think is the easiest to take care of? <br>
+		a - Venus Flytrap <br>
+		b - Hydnora Africana <br>
+		c - Cape Sundews <br>
+		d - Asian Pitcher Plants <br> 
+		e - Bromeliads <br>
+		</p>
+		<!-- adding the submit button -->
+		<input id="careQuiz" type="text">
+		<button onclick="plantChoice()">Submit</button>
+		<p id="quiz"></p>
 	</main>
-
 </div>
+<script>
+// function to add quiz 
+	function plantChoice() {
+	var letter = document.getElementById("careQuiz").value;
+	var text;
+	
+	//if the letter is "a", "c", or "d"
+	if (letter  === "a" || letter === "c"|| letter === "d"){
+		text = "Great job! You're correct!";
+	}
+	// if answered "b" or "e" 
+	else {
+		text = "Nope, try again.";}
+	document.getElementById("quiz").innerHTML = text;
+	}
+</script>
 </body>
 </html>
