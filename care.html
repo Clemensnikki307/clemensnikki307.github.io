@@ -32,34 +32,32 @@
 </nav>
 	<main>
 	<h2>Are you interested in owning and taking care of your own carnivorous plant?</h2>
-	<p>Which plant do you think is the easiest to take care of? <br>
-		a - Venus Flytrap <br>
-		b - Hydnora Africana <br>
-		c - Cape Sundews <br>
-		d - Asian Pitcher Plants <br> 
-		e - Bromeliads <br>
-		</p>
-		<!-- adding the submit button -->
-		<input id="careQuiz" type="text">
+	<p>Which  3 plants do you think is the easiest to take care of? <br></p>
+		<input type="checkbox" id="plant1" name="input" value="right"/>
+		<label for="plant1">A. Venus Flytrap</label><br>
+		<input type="checkbox" id="plant2" name="input" value="wrong"/>
+		<label for="plant2">B. Hydnora Africana</label> <br>
+		<input type="checkbox" id="plant3" name="input" value="right"/>
+		<label for="plant3">C. Cape Sundews</label> <br>
+		<input type="checkbox" id="plant4" name="input" value="right"/>
+		<label for="plant4">D. Asian Pitcher Plant</label> <br>
+		<input type="checkbox" id="plant5" name="input" value="wrong"/>
+		<label for="plant5">E. Bromeliads</label> <br>
+		
+				<!-- adding the submit button -->
 		<button onclick="plantChoice()">Submit</button>
 		<p id="quiz"></p>
+<!-- 
+I had multiple issues with getting this multiple choice quiz to function properly. 
+In the previous chapter I had it set up to where there are 3 right answers and if	
+you were to choose any of them it would give you the "You're right" text. I wanted to 
+change it so that it would only give you that when you have choosen all three correct answers.
+I had to find a way to identify the "right" answers and then have the program only do the "You're right"
+text once all three were choosen and not any less. I mainly utilized the w3c validator for my HTML as 
+Well as the console for any errors that happened when executing the code. 
+-->
 	</main>
 </div>
-<script>
-// function to add quiz 
-	function plantChoice() {
-	var letter = document.getElementById("careQuiz").value;
-	var text;
-	
-	//if the letter is "a", "c", or "d"
-	if (letter  === "a" || letter === "c"|| letter === "d"){
-		text = "Great job! You're correct!";
-	}
-	// if answered "b" or "e" 
-	else {
-		text = "Nope, try again.";}
-	document.getElementById("quiz").innerHTML = text;
-	}
-</script>
+<script src="care.js"></script> 
 </body>
 </html>
