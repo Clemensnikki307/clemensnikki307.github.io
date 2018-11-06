@@ -42,41 +42,20 @@
       	 <div id="errorText"></div> 
         <div id="numErrorText"></div>
         <fieldset id="contactinfo">
-           <legend>Reason for contacting</legend>
-            <input id="mInfo" name="MoreInfo" type="checkbox" />
-            <label for="mInfo">More Info</label>
-            <input id="cReturn" name="ContactReturn" type="checkbox" />
-            <label for="cReturn">Return</label>
-            <input id="cOther" name="ContactOther" type="checkbox" />
-            <label for="cOther">Other</label>
+            <label for="fnameinput">First Name</label>
+            <input id="fName" name="firstName" type="text" required="required" /> <br>
+            <label for="lnameinput">Last Name</label>
+            <input id="lName" name="lastName" type="text" required="required" /> <br>
+        	<label for="phoneinput">Phone</label>
+            <input id="cPhone" name="phone" type="number" maxlength="10" required="required" placeholder="5555555555"/> <br>
+       		<label for="emailinput">Email Address</label>
+            <input id="cEmail" name="email" type="email" required="required" placeholder="JohnSmith@gmail.com"/> <br>
+        	<label for="messageinput">Leave a message</label>
+        	<textarea id="cMessage" name="message" placeholder="Enter custom message here (max 250 characters)"></textarea>
         </fieldset>
-         <fieldset>
-            <label for="firstName">First Name</label>
-            <input id="fName" name="FirstName" type="text" required="required" />
-        </fieldset>
-        <fieldset>
-            <label for="lastName">Last Name</label>
-            <input id="lName" name="LastName" type="text" required="required" />
-        </fieldset>
-        
-        <fieldset>
-        	<label for="cPhone">Phone</label>
-            <input id="cPhone" name="Phone" type="number" maxlength="10" required="required" placeholder="5555555555"/>
-        </fieldset>
-        
-        <fieldset>
-       		<label for="cEmail">Email Address</label>
-            <input id="cEmail" name="Email" type="email" required="required" placeholder="JohnSmith@gmail.com"/>
-        </fieldset>
-        
-        <fieldset>
-        	<label for="cMessage">Leave a message</label>
-        	<textarea id="cMessage" name="Message" placeholder="Enter custom message here (max 250 characters)"></textarea>
-        </fieldset>
-        
-         <div id="buttonContainer">
+         <fieldset id="buttonContainer">
             <input type="submit" value="Submit" id="submitButton" />
-         </div>
+         </fieldset>
       </form>
    </article>
    <script src="contact.js"></script>
