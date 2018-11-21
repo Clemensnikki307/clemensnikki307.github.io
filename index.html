@@ -32,28 +32,12 @@
 		<a href="care.html">Caring For A Venus Flytrap</a>
 		<a href="purchase.html">Ready To Purchase?</a>
 </nav>
-<main>
- <p>Validation Table</p>
- <table border="1">
- 	<tr>
-		<th> FieldName </th>
-		<th> FieldLabel </th>
-		<th> Validation preformed before submission </th>
-		<th> Validation left to web server</th>
-	</tr>
-	<tr>
-		<td>contact.htm</td>
-		<td>contact info</td>
-		<td>adding escape characters to HTML elements</td>
-		<td>prevents being able to switch into any execution context</td>
-	</tr>
-	<tr>
-		<td>contact.htm</td>
-		<td>contact info</td>
-		<td>making sure attributes are quoted (single or double)</td>
-		<td>prevents being able to switch out of the attribute</td>
-	</tr>
-</main>
+<article id="location"> Chapter 10 Map
+	<div id="map"></div>
+	<div id="directions"></div>
+</article>
 </div>
+<script src="index.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 </body>
 </html>
