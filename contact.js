@@ -1,8 +1,8 @@
 /* JavaScript 6th Edition
-	Chapter 8
+	Chapter 12
 	
 	Name: Nikki
-	Date: 11-4-18
+	Date: 12-3-18
 	
 	Filename: contact.js
 	

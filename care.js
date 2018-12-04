@@ -1,8 +1,8 @@
 /*JavaScript 6th Edition
-      Chapter 8
+      Chapter 12
 
       Author: Nikki Clemens
-      Date:   11-4-18
+      Date:   12-3-18
 
       Filename: care.js
 

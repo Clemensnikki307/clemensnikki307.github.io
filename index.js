@@ -1,8 +1,8 @@
 /*  JavaScript 6th Edition
-    Chapter 10
+    Chapter 12
     
     Author: Nikki
-    Date:  11-19-18 
+    Date:  12-3-18 
 
     Filename: index.js
 */
